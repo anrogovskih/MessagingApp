@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="isLastMessageVisible"
+            type="Boolean" />
+
+        <variable
+            name="newMessagesCounter"
+            type="Integer" />
+    </data>
+
+    <merge>
+        <com.axmor.fsinphone.videomessages.ui.customViews.BadgeView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="12dp"
+            android:visibility="@{isLastMessageVisible || newMessagesCounter == 0? View.INVISIBLE : View.VISIBLE}"
+            app:backgroundColor="@color/colorRedLight"
+            app:layout_constraintCircle="@+id/scrollToEndButton"
+            app:layout_constraintCircleRadius="26dp"
+            app:number="@{newMessagesCounter}"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/scrollToEndButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/content_description_scroll_to_end"
+            android:visibility="invisible"
+            app:backgroundTint="@color/colorAccent"
+            app:elevation="8dp"
+            app:fabCustomSize="42dp"
+            app:isShown="@{!isLastMessageVisible}"
+            app:layout_constraintBottom_toBottomOf="@+id/swipeRefreshLayout"
+            app:layout_constraintEnd_toEndOf="@+id/swipeRefreshLayout"
+            app:srcCompat="@drawable/ic_chevron_bottom"
+            app:tint="@android:color/white"
+            tools:visibility="visible" />
+
+    </merge>
+</layout>

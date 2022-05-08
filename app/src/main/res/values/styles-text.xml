@@ -1,0 +1,145 @@
+<resources>
+
+    <style name="RobotoBold">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RobotoMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="RobotoRegular">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="StyleEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_edit_text</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="StyleEditTextPhoneCode" parent="StyleEditText">
+        <item name="android:background">@drawable/selector_edit_text_phone_code</item>
+    </style>
+
+    <style name="StyleEditTextPhone" parent="StyleEditText">
+        <item name="android:background">@drawable/selector_edit_text_phone</item>
+    </style>
+
+    <style name="InputField" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+        <item name="boxCornerRadiusBottomStart">4dp</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
+        <item name="boxStrokeColor">@color/selector_edit_text_frame</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintTextColor">@color/colorGray</item>
+        <item name="android:theme">@style/TextInputLayoutAppearance</item>
+        <item name="errorTextAppearance">@style/TextInputLayoutErrorAppearance</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextColor">@color/colorSalmon</item>
+        <item name="boxStrokeErrorColor">@color/colorSalmon</item>
+    </style>
+
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <item name="android:textSize">16sp</item>
+        <item name="colorControlNormal">@color/colorGray3</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="TextInputLayoutErrorAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorSalmon</item>
+    </style>
+
+    <style name="TitleTextAppearance">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="ChatContactPrimaryText">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorDarkMulberryGray</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="ChatContactSecondaryText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="ChatWarningText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ChatTimestampText" parent="RobotoMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ChatTextMessage" parent="RobotoRegular">
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:autoLink">web</item>
+    </style>
+
+    <style name="ChatMessageDate" parent="RobotoMedium">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:lineSpacingExtra">10sp</item>
+    </style>
+
+    <style name="ChatAction" parent="RobotoRegular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textColor">@color/colorBlack2</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawablePadding">32dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="drawableTint">@color/colorDarkMulberryGray</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="VideoCallTimer" parent="RobotoBold">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="VideoCallContactName">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="Label1" parent="RobotoRegular">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTextDark</item>
+    </style>
+</resources>

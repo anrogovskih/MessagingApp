@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="com.axmor.fsinphone.videomessages.core.entities.IChatContactItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:foreground="?selectableItemBackground"
+        app:toggle="@{item.clickObserver}">
+
+        <com.axmor.fsinphone.videomessages.ui.customViews.AvatarView
+            android:id="@+id/avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:urlOrBase64="@{item.avatar}"
+            tools:background="@android:color/black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_help"
+            android:visibility="@{item.dialogWithSupport? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/avatar"
+            app:layout_constraintEnd_toEndOf="@id/avatar"
+            app:layout_constraintStart_toStartOf="@id/avatar"
+            app:layout_constraintTop_toTopOf="@id/avatar" />
+
+        <TextView
+            android:id="@+id/primaryText"
+            style="@style/ChatContactPrimaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:singleLine="true"
+            android:text="@{item.getPrimaryText()}"
+            app:layout_constraintBottom_toTopOf="@+id/secondaryText"
+            app:layout_constraintEnd_toStartOf="@+id/badge"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_goneMarginEnd="8dp"
+            app:layout_goneMarginStart="0dp"
+            tools:text="Константин Александрович Христорождественский" />
+
+        <TextView
+            android:id="@+id/secondaryText"
+            style="@style/ChatContactSecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:alpha="@{item.getNewMessagesCount() > 0? 1.0f : 0.5f}"
+            android:singleLine="true"
+            android:text="@{item.getSecondaryText(context)}"
+            android:visibility="@{item.getSecondaryText(context).isEmpty()? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/primaryText"
+            app:layout_constraintStart_toStartOf="@+id/primaryText"
+            app:layout_constraintTop_toBottomOf="@+id/primaryText"
+            tools:text="Тебя выпустят, это точно. Сегодня разговаривал с адвокатом о процедуре аппеляции, у него очень хорошие прогнозы."
+            tools:visibility="visible" />
+
+        <com.axmor.fsinphone.videomessages.ui.customViews.BadgeView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:visibility='@{item.getNewMessagesCount() > 0? View.VISIBLE : View.GONE}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:number="@{item.newMessagesCount}" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorGray2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/primaryText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

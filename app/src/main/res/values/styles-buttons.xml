@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextButton" parent="RobotoMedium">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorDarkGreen</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ChatActionButton">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Button" parent="RobotoMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+    </style>
+
+    <style name="ButtonFullscreen">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:backgroundTint">@color/selector_solid_button</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="BackWithChevron" parent="RobotoMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/common_back</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="drawableStartCompat">@drawable/ic_chevron_left</item>
+    </style>
+
+    <style name="ViewMediaSend">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="android:src">@drawable/ic_send</item>
+        <item name="android:background">@drawable/selector_oval_button</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="VideoCallController" parent="BaseVideoCallController">
+        <item name="android:background">@drawable/selector_oval_white_outlined_solid_when_selected</item>
+        <item name="tint">@color/selector_light_and_dark_when_selected</item>
+    </style>
+
+    <style name="ButtonHangup" parent="SolidVideoController">
+        <item name="android:backgroundTint">@color/colorBgRed</item>
+        <item name="android:foreground">@drawable/ripple_shape_oval_red</item>
+        <item name="srcCompat">@drawable/ic_call_end</item>
+        <item name="android:contentDescription">@string/content_description_hangup</item>
+    </style>
+
+    <style name="GreenVideoCallController" parent="SolidVideoController">
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:foreground">@drawable/ripple_shape_oval_accent</item>
+    </style>
+
+    <style name="SolidVideoController" parent="BaseVideoCallController">
+        <item name="android:background">@drawable/shape_oval</item>
+    </style>
+
+    <style name="BaseVideoCallController">
+        <item name="android:layout_width">@dimen/video_call_controller_size</item>
+        <item name="android:layout_height">@dimen/video_call_controller_size</item>
+    </style>
+
+    <style name="OvalGreenButton" parent="RobotoMedium">
+        <item name="android:background">@drawable/shape_rectangle_accent_oval</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.axmor.fsinphone.videomessages.ui.screens.chat.ChatViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray4">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar_with_avatar"
+            bind:avatar="@{viewModel.contactLiveData.image}"
+            bind:buttonBackClickObservable="@{viewModel.stateLiveData.backButtonClick}"
+            bind:headerClickObservable="@{viewModel.stateLiveData.headerClick}"
+            bind:title="@{viewModel.contactLiveData.name}" />
+
+        <include
+            layout="@layout/view_error_screen"
+            bind:clickObservable="@{viewModel.stateLiveData.updateClickObservable}"
+            bind:isNetworkError="@{viewModel.stateLiveData.isNetworkError}"
+            bind:isVisible="@{viewModel.stateLiveData.isErrorScreenShown}" />
+
+        <com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="@{viewModel.stateLiveData.isErrorScreenShown? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/chatInputField"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:onRefresh="@{viewModel.stateLiveData.isRefreshing}"
+            app:refreshing="@{viewModel.stateLiveData.isRefreshing}"
+            app:srl_direction="bottom"
+            tools:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/chat_messages_vertical_space"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/chatInputField"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:reverseLayout="true" />
+        </com.omadahealth.github.swipyrefreshlayout.library.SwipyRefreshLayout>
+
+        <include
+            android:id="@+id/scrollToEndButtonBinding"
+            layout="@layout/view_chat_scroll_to_end_button"
+            bind:newMessagesCounter="@{viewModel.stateLiveData.newMessagesCounter}"
+            bind:isLastMessageVisible="@{viewModel.stateLiveData.isLastMessageVisible}"/>
+
+        <include
+            android:id="@+id/chatInputField"
+            layout="@layout/view_chat_input_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.contactLiveData.chatSettings.isChatAllowed() ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            bind:buttonClickObservable="@{viewModel.stateLiveData.actionButtonClickObservable}"
+            bind:inputObservable="@{viewModel.stateLiveData.inputFieldObservable}"
+            bind:isActionButtonVisible="@{viewModel.contactLiveData.chatSettings.attachmentsAllowed()}"
+            bind:isButtonEnabled="@{viewModel.stateLiveData.isActionButtonEnabled}"
+            bind:isButtonSend="@{viewModel.stateLiveData.isActionButtonSend}"
+            bind:isMessageInputVisible="@{viewModel.contactLiveData.chatSettings.text.is_allowed}"
+            bind:maxLength="@{viewModel.contactLiveData.chatSettings.text.max_length}" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.loadingLiveData? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:visibility="@{viewModel.pageLoadingLiveData? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

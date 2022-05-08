@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.axmor.fsinphone.videomessages.common.Constants" />
+
+        <variable
+            name="viewModel"
+            type="com.axmor.fsinphone.videomessages.ui.screens.contact_details.ContactDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/view_toolbar_with_button"
+            app:buttonBackClickObservable="@{viewModel.stateLiveData.buttonBackClickObservable}"
+            app:contentDescription="@{@string/common_edit}"
+            app:customButtonClick="@{viewModel.stateLiveData.buttonEditClickObservable}"
+            app:customButtonIcon="@{@drawable/ic_mode_edit}"
+            app:title="@{@string/contact_details_profile}" />
+
+        <com.axmor.fsinphone.videomessages.ui.customViews.AvatarView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/contact_details_avatar_size"
+            android:layout_height="@dimen/contact_details_avatar_size"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:urlOrBase64="@{viewModel.contactLiveData.image}" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/RobotoMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/contact_details_layout_margin_horizontal"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="@{viewModel.contactLiveData.name}"
+            android:textColor="@color/colorDarkMulberryGray"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            tools:text="Евгений Гришкович" />
+
+        <TextView
+            android:id="@+id/tv_object"
+            style="@style/RobotoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/contact_details_layout_margin_horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@{viewModel.contactLiveData.object_title}"
+            android:textColor="@color/colorDarkMulberryGray"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            tools:text="ФКУ СИЗО №1 г. Санкт-Петербурга" />
+
+        <TextView
+            android:id="@+id/tv_last_activity"
+            style="@style/RobotoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/contact_details_layout_margin_horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textColor="@color/colorDarkMulberryGray"
+            android:textSize="16sp"
+            app:defaultDate="@{viewModel.contactLiveData.last_activity}"
+            app:layout_constraintTop_toBottomOf="@id/tv_object"
+            app:newDateFormat="@{Constants.CONTACT_DETAILS_LAST_ACTIVITY_DATE_FORMAT}"
+            tools:text="Был в сети 2 июля" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

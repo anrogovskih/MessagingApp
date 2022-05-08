@@ -1,0 +1,12 @@
+rootProject.name='FSIN Video Messages'
+include ':app'
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}

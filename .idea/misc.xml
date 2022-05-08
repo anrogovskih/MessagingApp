@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/StudioProjects/messaging_app/app/src/main/res/layout/activity_incoming_call.xml" value="0.28940217391304346" />
+        <entry key="..\:/StudioProjects/messaging_app/app/src/main/res/layout/view_faq_item.xml" value="0.1" />
+        <entry key="..\:/StudioProjects/messaging_app/app/src/main/res/layout/view_settings_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/arogovskikh/AppData/Local/Android/Sdk/platforms/android-30/data/res/drawable/list_selector_background.xml" value="0.166" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/bg_splash_screen.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_chevron_bottom.xml" value="0.1965" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_chevron_left.xml" value="0.1965" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_clear.xml" value="0.2045" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_help.xml" value="0.132" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_launcher_foreground_56dp.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_launcher_notifications.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_launcher_notifications_gerb.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_logo_56dp.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_logo_fsinet.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_logo_fsinet_56dp.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_logo_fsinet_foreground.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/ic_logo_fsinet_foreground_56dp.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/drawable/placehoder_image_error.xml" value="0.1585" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/activity_incoming_call.xml" value="0.12135416666666667" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/activity_main.xml" value="0.12409420289855072" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/activity_phone_verification.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/activity_video_call.xml" value="0.14628623188405798" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_chat.xml" value="0.4652777777777778" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_chat_with_support.xml" value="0.14069179945588806" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_contact_details.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_edit_contact.xml" value="0.33" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_enter_code.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_enter_phone.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_main.xml" value="0.14715447154471545" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_payment.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_receiver_selection.xml" value="0.1459349593495935" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/fragment_refill_balance.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/layout_progress_bar_for_constraint_layout.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_bar_text_with_button.xml" value="0.9" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_chat_contact.xml" value="0.3981385729058945" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_chat_input_field.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_chat_message_with_image_preview.xml" value="0.12952898550724637" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_chat_scroll_to_end_button.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_chat_text_message.xml" value="0.39557399723374825" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_error.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_error_screen.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_logo_bar.xml" value="0.67" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_logo_bar_with_settings.xml" value="0.33" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_media_view_footer.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_toolbar_with_avatar.xml" value="0.5" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/layout/view_toolbar_with_button.xml" value="0.1" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1785" />
+        <entry key="..\:/Users/arogovskikh/StudioProjects/android-video-messages/app/src/main/res/mipmap-anydpi/ic_launcher.xml" value="0.198" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK" />
+</project>

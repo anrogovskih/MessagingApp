@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="buttonBackClickObservable"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="customButtonIcon"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="customButtonClick"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="contentDescription"
+            type="String" />
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/colorAccent"
+        android:elevation="16dp"
+        app:buttonGravity="center_vertical"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:navigationContentDescription="@string/common_back"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@{title}"
+        app:titleTextAppearance="@style/TitleTextAppearance"
+        app:titleTextColor="@android:color/white"
+        app:toggle="@{buttonBackClickObservable}"
+        tools:title="Настройки">
+
+        <ImageButton
+            android:layout_width="@dimen/toolbar_height"
+            android:layout_height="@dimen/toolbar_height"
+            android:layout_gravity="end"
+            android:background="@drawable/selector_transparent_accent_button_oval"
+            android:contentDescription="@{contentDescription}"
+            android:foreground="?selectableItemBackground"
+            android:visibility="@{customButtonIcon == null ? View.GONE : View.VISIBLE}"
+            app:drawable="@{customButtonIcon}"
+            app:toggle="@{customButtonClick}"
+            tools:src="@drawable/ic_settings" />
+
+    </androidx.appcompat.widget.Toolbar>
+</layout>

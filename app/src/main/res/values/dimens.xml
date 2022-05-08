@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- радиус бэйджа, см. BadgeDrawable -->
+    <dimen name="mtrl_badge_with_text_radius" tools:override="true">12dp</dimen>
+    <!-- Horizontally align start/end of text badge 6dp from the end/start edge of anchor-->
+    <dimen name="mtrl_badge_text_horizontal_edge_offset" tools:override="true">6dp</dimen>
+    <dimen name="mtrl_badge_text_size" tools:override="true">14sp</dimen>
+
+    <!-- Common -->
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_elevation">16dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+
+    <!-- Camera -->
+    <dimen name="camera_bottom_bar_height">88dp</dimen>
+    <dimen name="camera_flip_button_size">56dp</dimen>
+    <dimen name="camera_flip_button_margin_end">28dp</dimen>
+
+    <!-- Chat -->
+    <dimen name="chat_avatar_size">40dp</dimen>
+    <dimen name="chat_input_field_height">64dp</dimen>
+    <dimen name="chat_message_arrow_margin">8dp</dimen>
+    <dimen name="chat_message_larger_horizontal_margin">56dp</dimen>
+    <dimen name="chat_message_radius">8dp</dimen>
+    <dimen name="chat_message_arrow_width">16dp</dimen>
+    <dimen name="chat_message_arrow_height">12dp</dimen>
+    <dimen name="chat_messages_vertical_space">8dp</dimen>
+    <dimen name="chat_message_image_preview_width">286dp</dimen>
+    <dimen name="chat_message_image_preview_height">190dp</dimen>
+    <dimen name="chat_message_with_image_preview_central_icon_size">56dp</dimen>
+    <dimen name="chat_text_field_margin_4">4dp</dimen>
+    <dimen name="chat_text_field_margin_8">8dp</dimen>
+
+    <!-- Contact Details -->
+    <dimen name="contact_details_layout_margin_horizontal">16dp</dimen>
+    <dimen name="contact_details_avatar_size">104dp</dimen>
+    <dimen name="contact_details_avatar_text_size">48sp</dimen>
+
+    <!-- Main -->
+    <dimen name="main_bottom_space">80dp</dimen>
+    <dimen name="main_top_space">16dp</dimen>
+
+    <!-- Settings -->
+    <dimen name="settings_common_margin_top">12dp</dimen>
+    <dimen name="settings_faq_margin_top">38dp</dimen>
+
+    <!-- Splash -->
+    <dimen name="splash_title_text_size">32sp</dimen>
+    <dimen name="splash_subtitle_margin_top">4dp</dimen>
+    <dimen name="splash_subtitle_text_size">16sp</dimen>
+    <dimen name="splash_spinner_size">64dp</dimen>
+
+    <!-- Video Call -->
+    <dimen name="video_call_controller_size">48dp</dimen>
+
+    <!-- View message -->
+    <dimen name="view_message_bottom_bar_height">64dp</dimen>
+</resources>

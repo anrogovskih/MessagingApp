@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBarButtonStyle">@style/DialogButtonStyle</item>
+    </style>
+
+    <!-- Buttons in alert dialog -->
+    <style name="DialogButtonStyle" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- Splash screen theme -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/bg_splash_screen</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+    </style>
+
+    <style name="ActivityFullScreen" parent="AppTheme">
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+    <style name="StyleToolbarButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/selector_transparent_white_button_oval</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="ChatItemBubbleLayout">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="borderWidth">0dp</item>
+        <item name="centerArrow">false</item>
+        <item name="clipToRadius">true</item>
+        <item name="radius">@dimen/chat_message_radius</item>
+        <item name="triangleHeight">@dimen/chat_message_arrow_height</item>
+        <item name="triangleWidth">@dimen/chat_message_arrow_width</item>
+    </style>
+
+    <style name="ChatWarningIcon">
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+    <style name="ChatStatusIcon">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
+
+</resources>

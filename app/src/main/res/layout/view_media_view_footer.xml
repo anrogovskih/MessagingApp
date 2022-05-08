@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="buttonBackClickObservable"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="isButtonSendVisible"
+            type="Boolean" />
+
+        <variable
+            name="isButtonSendEnabled"
+            type="Boolean" />
+
+        <variable
+            name="buttonSendClickObservable"
+            type="androidx.databinding.ObservableBoolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBgSemitransparent">
+
+        <TextView
+            android:id="@+id/tv_button_cancel"
+            style="@style/BackWithChevron"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:toggle="@{buttonBackClickObservable}" />
+
+        <ImageView
+            android:id="@+id/iv_button_send"
+            style="@style/ViewMediaSend"
+            android:contentDescription="@string/common_send"
+            android:enabled="@{isButtonSendEnabled}"
+            android:visibility="@{isButtonSendVisible ? View.VISIBLE : View.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:toggle="@{buttonSendClickObservable}" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="settingsClick"
+            type="androidx.databinding.ObservableBoolean" />
+
+    </data>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/colorAccent"
+        android:elevation="16dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="8dp"
+        app:logo="@drawable/ic_launcher_foreground_56dp"
+        app:title="@string/common_title"
+        app:titleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/TitleTextAppearance">
+
+            <ImageButton
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/ic_settings"
+                android:background="@drawable/selector_transparent_accent_button_oval"
+                android:foreground="?selectableItemBackground"
+                android:layout_gravity="end"
+                app:toggle="@{settingsClick}"/>
+
+    </androidx.appcompat.widget.Toolbar>
+</layout>

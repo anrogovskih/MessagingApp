@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.axmor.fsinphone.videomessages.core.enums.ChatMessageStatusIcon" />
+
+        <import type="com.axmor.fsinphone.videomessages.core.enums.ChatWarningIcon" />
+
+        <variable
+            name="item"
+            type="com.axmor.fsinphone.videomessages.core.entities.chat.base.ChatItemWithStatus" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="1dp"
+    android:background="@drawable/bg_rounded_rectangle_4dp"
+    android:backgroundTint="@color/colorGrayTranslucent">
+
+    <ImageView
+        android:id="@+id/warningIcon"
+        style="@style/ChatWarningIcon"
+        app:icon="@{item.icon}"
+        android:visibility="@{item.icon != ChatWarningIcon.NONE ? View.VISIBLE : View.GONE}"
+        app:layout_constraintBottom_toBottomOf="@+id/warningText"
+        app:layout_constraintEnd_toStartOf="@+id/warningText"
+        app:layout_constraintTop_toTopOf="@+id/warningText"
+        app:layout_goneMarginEnd="0dp"
+        tools:visibility="gone"
+        tools:src="@drawable/ic_error" />
+
+    <TextView
+        android:id="@+id/warningText"
+        style="@style/ChatWarningText"
+        android:alpha="@{item.alertTextAlpha}"
+        android:text="@{item.alertText}"
+        android:visibility="@{item.icon != ChatWarningIcon.NONE ? View.VISIBLE : View.GONE}"
+        app:layout_constraintBaseline_toBaselineOf="@+id/createdAt"
+        app:layout_constraintEnd_toStartOf="@+id/createdAt"
+        app:textColorRes="@{item.alertTextColor}"
+        app:layout_goneMarginEnd="0dp"
+        tools:visibility="gone"
+        />
+
+    <ImageView
+        style="@style/ChatStatusIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/createdAt"
+        app:layout_constraintEnd_toStartOf="@+id/createdAt"
+        app:layout_constraintTop_toTopOf="@+id/createdAt"
+        app:status="@{item.status}" />
+
+    <TextView
+        android:id="@+id/createdAt"
+        style="@style/ChatTimestampText"
+        android:textColor="@android:color/white"
+        app:date="@{item.time}"
+        app:dateFormat='@{"HH:mm"}'
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="10:15" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

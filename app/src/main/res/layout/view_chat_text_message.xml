@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.axmor.fsinphone.videomessages.ui.customViews.bubble_layout.BubbleLayout" />
+
+        <import type="android.view.View" />
+
+        <import type="com.axmor.fsinphone.videomessages.core.enums.ChatMessageStatusIcon" />
+
+        <import type="com.axmor.fsinphone.videomessages.core.enums.ChatWarningIcon" />
+
+        <variable
+            name="item"
+            type="com.axmor.fsinphone.videomessages.core.entities.chat.base.ChatTextBubbleItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ChatMessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{item.isDateVisible()? View.VISIBLE : View.GONE}"
+            app:dateGroup="@{item.time}"
+            tools:text="Сегодня" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/chat_messages_vertical_space"
+            android:background="@{item.isSelected()? @color/colorSelectableBackground : @android:color/transparent}"
+            app:longClick="@{item.itemLongClick}">
+
+            <com.axmor.fsinphone.videomessages.ui.customViews.bubble_layout.BubbleLayout
+                style="@style/ChatItemBubbleLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bgColor="@{item.background}"
+                app:isOutgoing="@{item.isOutgoing()}"
+                app:longClick="@{item.itemLongClick}"
+                app:toggle="@{item.bubbleClickObservable()}">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/ChatTextMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="@{item.text}"
+                        app:layout_constraintBottom_toTopOf="@+id/createdAt"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Хай"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/warningIcon"
+                        style="@style/ChatWarningIcon"
+                        app:icon="@{item.icon}"
+                        app:layout_constraintBottom_toBottomOf="@+id/warningText"
+                        app:layout_constraintEnd_toStartOf="@+id/warningText"
+                        app:layout_constraintTop_toTopOf="@+id/warningText"
+                        tools:src="@drawable/ic_error"
+                        tools:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/warningText"
+                        style="@style/ChatWarningText"
+                        android:alpha="@{item.alertTextAlpha}"
+                        android:text="@{item.alertText}"
+                        android:visibility="@{item.icon != ChatWarningIcon.NONE ? View.VISIBLE : View.GONE}"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/createdAt"
+                        app:layout_constraintEnd_toStartOf="@+id/createdAt"
+                        app:textColorRes="@{item.alertTextColor}"
+                        tools:text="Сообщение удалено"
+                        tools:visibility="gone" />
+
+                    <ImageView
+                        style="@style/ChatStatusIcon"
+                        app:layout_constraintBottom_toBottomOf="@+id/createdAt"
+                        app:layout_constraintEnd_toStartOf="@+id/createdAt"
+                        app:layout_constraintTop_toTopOf="@+id/createdAt"
+                        app:status="@{item.status}" />
+
+                    <TextView
+                        android:id="@+id/createdAt"
+                        style="@style/ChatTimestampText"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/colorGray"
+                        app:date="@{item.time}"
+                        app:dateFormat='@{"HH:mm"}'
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="10:15" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.axmor.fsinphone.videomessages.ui.customViews.bubble_layout.BubbleLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

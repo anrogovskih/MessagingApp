@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#009b48</color>
+    <color name="colorAccent">#00b956</color>
+
+    <color name="colorTransparentSelectorPressed">#8000B956</color>
+    <color name="colorTransparentSelectorPressed2">#80A1A1A1</color>
+
+    <color name="colorBgSemitransparent">#99000000</color>
+    <color name="colorBgDark">#363636</color>
+    <color name="colorBgRed">#ff5959</color>
+    <color name="colorRedPressed">#e14040</color>
+    <color name="colorBgGreen">#77FF59</color>
+    <color name="colorBgDisabled">#c5c5c5</color>
+    <color name="colorBgAccentPressed">#007838</color>
+
+    <color name="colorBlack">#363636</color>
+    <color name="colorBlack2">#de000000</color>
+    <color name="colorBlue">#3a80c3</color>
+    <color name="colorBlueLight">#d1e6ff</color>
+    <color name="colorBrown">#9c7034</color>
+    <color name="colorCelery">#98D85C</color>
+    <color name="colorDarkGreen">#00b956</color>
+    <color name="colorDarkMulberryGray">#473f49</color>
+    <color name="colorDoubleColonialWhite">#efe7b1</color>
+    <color name="colorGray">#abb3af</color>
+    <color name="colorGray2">#e0e0e0</color>
+    <color name="colorGray3">#c5c5c5</color>
+    <color name="colorGray4">#e4ebe8</color>
+    <color name="colorGray5">#999999</color>
+    <color name="colorGray6">#d8d8d8</color>
+    <color name="colorGray7">#4a3c3c43</color>
+    <color name="colorGray8">#c6c6c8</color>
+    <color name="colorGrayTranslucent">#80000000</color>
+    <color name="colorGreen">#00c853</color>
+    <color name="colorMintCream">#effff7</color>
+    <color name="colorRedLight">#fd6261</color>
+    <color name="colorRedVeryLight">#f7d7d7</color>
+    <color name="colorRedVeryLight2">#ffc9c9</color>
+    <color name="colorRoman">#E85E5E</color>
+    <color name="colorSalmon">#ff7676</color>
+
+    <color name="colorTextDark">#363636</color>
+    <color name="colorTextGray">#999999</color>
+    <color name="colorTextLight">#b3b3b3</color>
+
+    <color name="colorSelectableBackground">#19000000</color>
+
+    <color name="ic_launcher_background">#16A749</color>
+</resources>

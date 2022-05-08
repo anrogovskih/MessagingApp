@@ -1,0 +1,63 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="88dp"
+android:height="88dp"
+android:viewportWidth="88"
+android:viewportHeight="88">
+<path
+    android:fillColor="#000"
+    android:fillType="evenOdd"
+    android:pathData="M44,44m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0" />
+<path
+    android:fillColor="#FF6060"
+    android:fillType="evenOdd"
+    android:pathData="M44,44m-35.75,0a35.75,35.75 0,1 1,71.5 0a35.75,35.75 0,1 1,-71.5 0"
+    android:strokeWidth=".5">
+    <aapt:attr name="android:strokeColor">
+        <gradient
+            android:endX="44"
+            android:endY="79.05002"
+            android:startX="44"
+            android:startY="8.25"
+            android:type="linear">
+            <item
+                android:color="#00000000"
+                android:offset="0" />
+            <item
+                android:color="#05000000"
+                android:offset="0.8" />
+            <item
+                android:color="#0A000000"
+                android:offset="1" />
+        </gradient>
+    </aapt:attr>
+</path>
+<path
+    android:fillColor="#00000000"
+    android:fillType="evenOdd"
+    android:pathData="M44,44m-35.75,0a35.75,35.75 0,1 1,71.5 0a35.75,35.75 0,1 1,-71.5 0"
+    android:strokeWidth=".5">
+    <aapt:attr name="android:strokeColor">
+        <gradient
+            android:endX="44"
+            android:endY="79.75"
+            android:startX="44"
+            android:startY="8.25"
+            android:type="linear">
+            <item
+                android:color="#1EFFFFFF"
+                android:offset="0" />
+            <item
+                android:color="#0FFFFFFF"
+                android:offset="0.2" />
+            <item
+                android:color="#00FFFFFF"
+                android:offset="1" />
+        </gradient>
+    </aapt:attr>
+</path>
+<path
+    android:fillColor="#FFF"
+    android:fillType="evenOdd"
+    android:pathData="M30,28L58,28A2,2 0,0 1,60 30L60,58A2,2 0,0 1,58 60L30,60A2,2 0,0 1,28 58L28,30A2,2 0,0 1,30 28z" />
+</vector>

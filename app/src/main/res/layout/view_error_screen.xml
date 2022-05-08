@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="clickObservable"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="isVisible"
+            type="androidx.databinding.ObservableBoolean" />
+
+        <variable
+            name="isNetworkError"
+            type="androidx.databinding.ObservableBoolean" />
+    </data>
+
+    <merge>
+
+        <TextView
+            android:id="@+id/errorText"
+            style="@style/RobotoMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginHorizontal="16dp"
+            android:gravity="center"
+            android:text="@{isNetworkError? @string/error_no_network : @string/error_download_single_line}"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="@color/colorDarkMulberryGray"
+            android:visibility="@{isVisible? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toTopOf="@+id/refreshButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/refreshButton"
+            style="@style/TextButton"
+            android:layout_width="0dp"
+            android:layout_marginHorizontal="60dp"
+            android:text="@string/common_update"
+            android:visibility="@{isVisible? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/errorText"
+            app:toggle="@{clickObservable}" />
+    </merge>
+</layout>

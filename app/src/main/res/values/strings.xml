@@ -1,0 +1,195 @@
+<resources>
+    <string name="app_name">ФСИНЭТ Телефон</string>
+
+    <!--    Общие строки-->
+    <string name="common_cancel">Отменить</string>
+    <string name="common_back">Назад</string>
+    <string name="common_slash_template">%1$s/%2$s</string>
+    <string name="common_respond">Ответить</string>
+    <string name="common_close">Закрыть</string>
+    <string name="common_error">Ошибка</string>
+    <string name="common_delete">Удалить</string>
+    <string name="common_update">Обновить</string>
+    <string name="common_repeat">Повторить</string>
+    <string name="common_exit">Выход</string>
+    <string name="empty"> </string>
+    <string name="pattern_phone_2">+7 (%1$s%2$s%3$s) %4$s%5$s%6$s-%7$s%8$s-%9$s%10$s</string>
+    <string name="common_title">ФСИНЭТ</string>
+    <string name="common_subtitle">Видеосообщения</string>
+    <string name="common_menu_help">Сообщить о проблеме</string>
+    <string name="common_loading">Загрузка…</string>
+    <string name="common_expand">Развернуть</string>
+    <string name="common_save">Сохранить</string>
+    <string name="common_edit">Редактировать</string>
+    <string name="common_today">Сегодня</string>
+    <string name="common_yesterday">Вчера</string>
+    <string name="common_send_again">Отправить ещё раз</string>
+    <string name="common_send">Отправить</string>
+    <string name="common_search">Поиск</string>
+    <string name="common_connecting">Установка соединения…</string>
+    <string name="common_hang_up">Сбросить</string>
+    <string name="common_refill_balance">Пополнить баланс</string>
+    <string name="common_receiver">Получатель</string>
+    <string name="common_card_number">Номер карты</string>
+    <string name="common_balance">Баланс</string>
+    <string name="common_rouble">₽</string>
+    <string name="common_your_mail">Ваша почта</string>
+    <string name="common_refill">Пополнить</string>
+    <string name="common_sum">Сумма</string>
+
+    <!-- Chat -->
+    <string name="chat_hint">Введите сообщение…</string>
+    <string name="chat_message_on_moderation">На модерации</string>
+    <string name="chat_message_declined">Не прошло модерацию</string>
+    <string name="chat_message_not_sent">Ошибка отправки</string>
+    <string name="chat_message_upload_error">Не удалось отправить сообщение</string>
+    <string name="chat_action_video_message">Записать видео</string>
+    <string name="chat_action_take_photo">Сделать фото</string>
+    <string name="chat_action_pick_image">Выбрать фото в галерее</string>
+
+    <!--Chat messages types -->
+    <string name="chat_message_type_video">Видеосообщение</string>
+    <string name="chat_message_type_text">Текстовое сообщение</string>
+    <string name="chat_message_type_image">Изображение</string>
+    <string name="chat_message_type_unknown">Неизвестный тип сообщения</string>
+
+    <!-- ContactDetails -->
+    <string name="contact_details_profile">Профиль</string>
+    <string name="contact_details_last_activity">Был в сети %s</string>
+    
+    <!-- ContentDescriptions -->
+    <string name="content_description_hangup">Сбросить звонок</string>
+    <string name="content_description_answer_call_with_video">Ответить по видеосвязи</string>
+    <string name="content_description_answer_call_no_video">Ответить без видео</string>
+    <string name="content_description_scroll_to_end">К последним сообщениям</string>
+
+    <!-- EditContact -->
+    <string name="edit_contact_edit_photo">Сменить фото</string>
+    <string name="edit_contact_enter_name">Введите имя</string>
+    <string name="edit_contact_edit_profile">Редактировать профиль</string>
+
+    <!-- Refill balance-->
+    <string name="select_receiver_title">Выбрать получателя</string>
+    <string name="refill_balance_email_hint">pochta@pochta.ru</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_exit">Выйти из приложения</string>
+    <string name="settings_notifications">Включить уведомления</string>
+    <string name="settings_faq">Часто задаваемые вопросы</string>
+    <string name="settings_support">Написать в поддержку</string>
+    <string name="settings_support_by_email">Сообщить о проблеме на почту</string>
+
+    <!-- Splash-screen -->
+    <string name="splash_subtitle">Обмен сообщениями</string>
+
+    <!-- Support -->
+    <string name="support_title">Техподдержка</string>
+    
+    <!--    Экран ввода номера телефона-->
+    <string name="enter_phone_title">Вход</string>
+    <string name="enter_phone_description">Введите свой номер телефона</string>
+    <string name="enter_phone_description2">На этот номер мы пришлем\nкод подтверждения</string>
+    <string name="enter_phone_next_button">Далее</string>
+
+    <!--    Экран ввода кода-->
+    <string name="enter_code_title">Вход</string>
+    <string name="enter_code_phone_label">Введите код подтверждения, отправленный на номер %1$s</string>
+    <string name="enter_code_time_label">Повторно запросить код можно будет через %1$s</string>
+    <string name="enter_code_resend_label">Выслать код повторно</string>
+
+    <!--    Экран приветствия-->
+    <string name="welcome_title">Добро пожаловать!</string>
+    <string name="welcome_description">Здесь вы можете отправлять и получать видеосообщения от людей, находящихся в исправительных учреждениях.</string>
+    <string name="welcome_new_message_button">+ Создать сообщение</string>
+
+    <!--    Список сообщений-->
+    <string name="video_messages_status_moderation">На проверке</string>
+    <string name="video_messages_status_received">Получено</string>
+    <string name="video_messages_status_sent">Отправлено</string>
+    <string name="video_messages_status_declined">Отклонено</string>
+    <string name="messages_list_delete_title">Удалить сообщение?</string>
+    <string name="messages_list_delete_message">Сообщение будет удалено без возможности восстановления</string>
+
+    <!--    Видео-->
+    <string name="video_call">видеозвонок</string>
+    <string name="video_call_time_expiration_alert">1 минута до окончания звонка</string>
+    <string name="video_call_low_bandwidth_alert">Низкое качество связи</string>
+    <string name="video_call_error_enable_video">Не удалось включить видео</string>
+    <string name="video_call_error_disable_video">Не удалось выключить видео</string>
+    <string name="video_call_hangup_call">Отклонить звонок</string>
+    <string name="video_call_ended_by_remote_before_connection">Абонент прекратил вызов</string>
+    <string name="video_call_missed">Пропущенный видеозвонок</string>
+
+    <!--    Выбор получателя-->
+    <string name="recipient_choose_title">Отправить сообщение</string>
+    <string name="recipient_choose_description">получатель:</string>
+    <string name="recipient_choose_empty_list_label">Для обмена сообщениями ваш номер должен быть добавлен в список разрешённых у адресата</string>
+
+    <!--    Экран записи видео-->
+    <string name="record_video_unavailable_send_video_in_progress_title">Запись видео недоступна</string>
+    <string name="record_video_unavailable_send_video_in_progress_message">Пожалуйста, дождитесь окончания отправки предыдущего видеосообщения.</string>
+    <string name="record_video_unavailable_send_video_fail_title">Запись видео недоступна</string>
+    <string name="record_video_unavailable_send_video_fail_message">Не удалось отправить предыдущее видеосообщение. Подтвердите или отмените повторную отправку.</string>
+    <string name="record_video_too_short_error">Запись слишком короткая</string>
+    <string name="record_video_permission_required_title">Запрет записи</string>
+    <string name="record_video_permission_required_message">Разрешите приложению доступ к камере и микрофону</string>
+    <string name="record_video_permission_required_button">Разрешить</string>
+
+    <!--    Экран предпросмотра и отправки видео-->
+    <string name="send_video_message_in_progress">Отправка видеосообщения…</string>
+
+    <!-- Нотификации -->
+    <string name="notification_send_video_progress_title">Отправка видеосообщения…</string>
+    <string name="notification_send_video_channel_name">Отправка сообщений</string>
+    <string name="notification_send_video_channel_description">Уведомления, содержащие прогресс и результат отправки сообщений</string>
+    <string name="notification_new_message_channel_name">Входящие сообщения</string>
+    <string name="notification_new_message_channel_description">Уведомления о новых входящих сообщениях</string>
+    <string name="notification_video_call_channel_name">Входящий видеозвонок</string>
+    <string name="notification_video_call_channel_description">Уведомления о новых входящих видеозвонках</string>
+    <string name="notification_video_call_default_content">Неизвестный контакт</string>
+    <string name="notification_send_video_success_title">Сообщение отправлено!</string>
+    <string name="notification_send_video_failure_title">Ошибка при отправке сообщения</string>
+    <string name="notification_send_video_failure_retry">Отправить ещё раз</string>
+    <string name="notification_send_video_failure_drop">Записать ещё раз</string>
+
+    <!-- Ошибки -->
+    <string name="errors_unknown">Неизвестная ошибка</string>
+    <string name="error_download">При загрузке данных\nпроизошла ошибка.</string>
+    <string name="error_download_single_line">При загрузке данных произошла ошибка.</string>
+    <string name="error_download_video">При загрузке видео произошла ошибка</string>
+    <string name="error_no_network">Нет интернет-соединения. Проверьте сетевое подключение и попробуйте ещё раз.</string>
+    <string name="error_no_network_title">Нет интернет-соединения</string>
+    <string name="error_no_network_message">Проверьте сетевое подключение и попробуйте ещё раз</string>
+    <string name="error_no_mail_client">Похоже, что у вас не настроен email-клиент по умолчанию</string>
+    <string name="error_read_external_storage_required">Требуется разрешение на чтение памяти устройства</string>
+    <string name="errors_camera">Произошла ошибка при попытке записи видео. Код ошибки: %d. Обратитесь к разработчикам.</string>
+    <string name="error_photo_camera">Произошла ошибка при попытке сделать фото. Код ошибки: %d. Обратитесь к разработчикам.</string>
+    <string name="error_unable_to_save_pic">Не удалось сохранить фотографию</string>
+    <string name="errors_camera_recoverable">Произошла ошибка при попытке записи видео. Код ошибки: %d. Настройки камеры были изменены, попробуйте записать видео ещё раз.</string>
+    <string name="error_image_load">Не удалось загрузить изображение</string>
+    <string name="error_image_compression">Не удалось уменьшить изображение до минимального допустимого размера: %.2f Мб</string>
+    <string name="error_500">Сервер не доступен, повторите попытку позднее</string>
+    <string name="error_no_gallery_found_message">На устройстве нет приложений для просмотра галереи фотографий. Найти приложение в Play Store?</string>
+    <string name="error_unsaved_changes">У вас %1$d %2$s %3$s. При выходе из профиля все неотправленные сообщения удаляются. Всё равно выйти?</string>
+    <string name="error_wrong_email">Введен некорректный email</string>
+
+    <plurals name="message">
+        <item quantity="zero">сообщений</item>
+        <item quantity="one">сообщение</item>
+        <item quantity="two">сообщения</item>
+        <item quantity="few">сообщения</item>
+        <item quantity="many">сообщений</item>
+        <item quantity="other">сообщений</item>
+    </plurals>
+
+    <plurals name="not_sent">
+        <item quantity="zero">неотправленных</item>
+        <item quantity="one">неотправленное</item>
+        <item quantity="two">неотправленных</item>
+        <item quantity="few">неотправленных</item>
+        <item quantity="many">неотправленных</item>
+        <item quantity="other">неотправленных</item>
+    </plurals>
+
+</resources>

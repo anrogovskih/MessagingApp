@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.axmor.fsinphone.videomessages.ui.customViews.bubble_layout.BubbleLayout" />
+
+        <import type="com.axmor.fsinphone.videomessages.R" />
+
+        <import type="android.view.View" />
+
+        <import type="android.view.Gravity" />
+
+        <import type="com.axmor.fsinphone.videomessages.core.entities.chat.base.ChatMessageWithImageItem.Icon" />
+
+        <variable
+            name="item"
+            type="com.axmor.fsinphone.videomessages.core.entities.chat.base.ChatMessageWithImageItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/ChatMessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{item.isDateVisible()? View.VISIBLE : View.GONE}"
+            app:dateGroup="@{item.time}"
+            tools:text="Сегодня" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/chat_messages_vertical_space"
+            android:background="@{item.isSelected()? @color/colorSelectableBackground : @android:color/transparent}"
+            app:longClick="@{item.itemLongClick}">
+
+            <com.axmor.fsinphone.videomessages.ui.customViews.bubble_layout.BubbleLayout
+                style="@style/ChatItemBubbleLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                app:backgroundColor="@{item.background}"
+                app:isOutgoing="@{item.isOutgoing()}"
+                app:longClick="@{item.itemLongClick}"
+                app:toggle="@{item.itemClick}">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlSymmetry">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/chat_message_image_preview_width"
+                        android:layout_height="@dimen/chat_message_image_preview_height"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        app:imageUri="@{item.getPreview()}"
+                        app:item="@{item}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:riv_corner_radius="@dimen/chat_message_radius" />
+
+                    <include
+                        layout="@layout/view_chat_message_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        bind:item="@{item}" />
+                </FrameLayout>
+            </com.axmor.fsinphone.videomessages.ui.customViews.bubble_layout.BubbleLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</layout>
