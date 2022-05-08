@@ -69,7 +69,10 @@ fun setTextColor(view: TextView, @ColorRes color: Int) {
 @BindingAdapter(value = ["defaultDate", "newDateFormat"])
 fun setFormattedDate(view: TextView, defaultDate: String?, newDateFormat: String) {
     if (defaultDate != null) {
-        val oldFormattedDate = "yyyy-MM-dd HH:mm:ss"
+        val oldFormattedDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).apply {
+            timeZone = TimeZone.getTimeZone("Europe/Moscow")
+        }.parse(defaultDate)
+
 
         if (oldFormattedDate != null) {
             val newFormattedDate =
