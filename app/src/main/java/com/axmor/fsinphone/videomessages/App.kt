@@ -16,6 +16,7 @@ import com.axmor.fsinphone.videomessages.common.extensions.registerReceiver
 import com.axmor.fsinphone.videomessages.common.logging.FileLogTree
 import com.axmor.fsinphone.videomessages.core.db.DatabaseManager
 import com.axmor.fsinphone.videomessages.core.di.LogFile
+import com.axmor.fsinphone.videomessages.core.network.ServerApi
 import com.axmor.fsinphone.videomessages.core.preferences.AppPreferences
 import com.axmor.fsinphone.videomessages.core.worker.LogCleaningWorker
 import com.github.piasy.biv.BigImageViewer
@@ -53,6 +54,7 @@ class App : Application(), Configuration.Provider {
 
         Timber.plant(FileLogTree(logFile))
 
+        ServerApi.init(preferences)
         DatabaseManager.init(this)
         createNotificationChannelIfNeeded()
         initWorkers()

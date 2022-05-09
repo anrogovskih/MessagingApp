@@ -7,6 +7,7 @@ import com.axmor.fsinphone.videomessages.core.db.DatabaseManager
 import com.axmor.fsinphone.videomessages.core.db.objects.*
 import com.axmor.fsinphone.videomessages.core.di.DeviceId
 import com.axmor.fsinphone.videomessages.core.enums.ChatMessageType
+import com.axmor.fsinphone.videomessages.core.network.ServerApi
 import com.axmor.fsinphone.videomessages.core.network.objects.DeleteMessageRequest
 import com.axmor.fsinphone.videomessages.core.network.objects.ReadMessageRequest
 import com.axmor.fsinphone.videomessages.core.network.objects.chat.ChatMessageStatus
@@ -222,6 +223,8 @@ class ChatRepoImpl @Inject constructor(
         val profile = getProfile()
         val request = GetMessagesRequest(profile.phoneNumber, deviceId, contactId, page, PAGE_SIZE)
         val response = GetMessagesResponse(null, 0)
+//        val response = ServerApi.api.getMessages(request)
+
         response.checkResponse()
         totalFlow.value = response.total
         return response
